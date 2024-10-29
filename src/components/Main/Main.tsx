@@ -117,17 +117,6 @@ const NavBar = styled.div`
     align-items:center;
 `
 
-const Navigation = styled.div`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 600px;
-    width:100%;
-    height: 80px;
-    background-color: #ffffff;
-    z-index: 1000;
-`;
-
 const PpizzangBot = styled.button`
     width: 97px;
     height: 97px;
