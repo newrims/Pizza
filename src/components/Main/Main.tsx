@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import Item from "./components/Item";
+import BottomNav from "./components/BottomNav";
 import { ReactComponent as Logosvg } from "../../assets/logo/LogoTransverse.svg";
 import { ReactComponent as Alarmsvg } from "../../assets/icon/bell-svgrepo-com-2.svg";
 import { ReactComponent as Cartsvg } from "../../assets/icon/shopping-cart-svgrepo-com.svg";
@@ -161,6 +162,13 @@ const PpizzangBot = styled.button`
 `;
 
 const Main: React.FC = () => {
+    const navButtons = [
+        { label: "홈", onClick: () => console.log("Home clicked") },
+        { label: "피드", onClick: () => console.log("Search clicked") },
+        { label: "내 가게", onClick: () => console.log("Profile clicked") },
+        { label: "채팅", onClick: () => console.log("Settings clicked") },
+        { label: "마이페이지", onClick: () => console.log("More clicked") },
+    ];
     return (
         <Wrapper>
             <HeaderWrapper>
@@ -191,7 +199,7 @@ const Main: React.FC = () => {
                 <PpizzangBot>
                     <Ppizzangsvg/>
                 </PpizzangBot>
-                <Navigation />
+                <BottomNav buttons={navButtons} />
             </NavBar>
         </Wrapper>
     );
