@@ -6,7 +6,7 @@ import { ReactComponent as Logosvg } from "../../assets/logo/LogoTransverse.svg"
 import { ReactComponent as Alarmsvg } from "../../assets/icon/bell-svgrepo-com-2.svg";
 import { ReactComponent as Cartsvg } from "../../assets/icon/shopping-cart-svgrepo-com.svg";
 import { ReactComponent as Searchsvg } from "../../assets/icon/search-svgrepo-com.svg";
-import { ReactComponent as Ppizzangsvg } from "../../assets/character/FaceYellow.svg";
+import { ReactComponent as Ppizzangsvg } from "../../assets/character/FaceRed.svg";
 
 const Wrapper = styled.div`
     display: flex;
