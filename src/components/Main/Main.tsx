@@ -63,6 +63,7 @@ const MainPageWrapper = styled.div`
     min-height: 100vh;
     background-color: #f5f5f5;
     margin: 0 auto;
+    gap: 25px;
 `;
 
 const SearchWrapper = styled.div`
@@ -73,7 +74,7 @@ const SearchWrapper = styled.div`
     justify-content: space-around;
     background-color: rgba(229, 229, 229, 1);
     border: 2px solid rgba(235, 172, 100, 1);
-    margin: 20px;
+    margin: 20px 20px 0;
 `;
 
 const Input = styled.input`
@@ -183,6 +184,7 @@ const Main: React.FC = () => {
                 </SearchWrapper>
                 <Item text={"우리동네 핫한🔥 책장"} />
                 <Item text={"지금 인기있는 베스트셀러"} />
+                <Item text={"ㅇㅇ님의 관심 책장"} />
             </MainPageWrapper>
             <NavBar>
 
