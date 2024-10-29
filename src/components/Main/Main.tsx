@@ -57,7 +57,9 @@ const Logo = styled(Logosvg)`
     height: 45px;
 `
 const MainPageWrapper = styled.div`
+    position: relative;
     width: 100%;
+    justify-content: center;
     display: flex;
     flex-direction: column;
     background-color: #f5f5f5;
@@ -145,14 +147,25 @@ const Session2 = styled.div`
     margin-top: 25px;
 `
 
-const BottomWrapper = styled.div`
+const BottomWrapper = styled.div`   
+    position: relative;
+    weight: 393px;
     height: 190px;
 `
 const Navigation = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 393px;
-    height: 69px;
-    background-color: rgba(255, 255, 255, 1);
-    border: none;
+    height: 60px;
+    background-color: #ffffff;
+    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* 가운데 정렬 */
+    z-index: 1000;
 `
 
 const PpizzangBot = styled.button`
@@ -161,7 +174,6 @@ const PpizzangBot = styled.button`
     background-color: #ffffff;
     border-radius: 48.5px;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
-    padding: 0;
     border: none;
     cursor: pointer;
 
@@ -173,8 +185,7 @@ const PpizzangBot = styled.button`
 
     /* 위치 설정 */
     position: fixed;
-    bottom: 20px; /* 하단에서 20px */
-    left: 20px; /* 왼쪽에서 20px */
+    bottom: 100px; 
     z-index: 1000; /* 다른 요소 위에 표시되도록 설정 */
 `
 
@@ -207,11 +218,12 @@ export default function Main() {
                     <TitleText>지금 인기있는 베스트셀러</TitleText>
                     <Rectangle />
                 </Session2>
+                <BottomWrapper>
+                    <PpizzangBot />
+                    <Navigation></Navigation>
+                </BottomWrapper>
             </MainPageWrapper>
-            <BottomWrapper>
-                <PpizzangBot />
-                <Navigation></Navigation>
-            </BottomWrapper>
+            
         </Wrapper>
     )
 }
