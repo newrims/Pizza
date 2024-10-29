@@ -187,7 +187,6 @@ const Main: React.FC = () => {
                 <Item text={"ㅇㅇ님의 관심 책장"} />
             </MainPageWrapper>
             <NavBar>
-
             
                 <PpizzangBot>
                     <Ppizzangsvg/>
