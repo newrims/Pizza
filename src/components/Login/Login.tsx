@@ -18,11 +18,11 @@ const Logo = styled(Logosvg)`
 `
 const Character = styled(Charactersvg)`
     margin-top: 40px;
-    width: 70%;
+    width: 80%;
 `
 const ButtonWrapper = styled.div`
     position: absolute;
-    bottom: 20%;
+    bottom: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;

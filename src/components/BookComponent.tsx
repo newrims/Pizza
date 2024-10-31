@@ -37,6 +37,7 @@ export default function BookComponent() {
     const changeBookName = (e: React.ChangeEvent<HTMLInputElement>) => {
         setBookName(e.target.value)
     }
+
     return (
         <>
             <Input value={bookName} onChange={changeBookName} placeholder="placeholder" />

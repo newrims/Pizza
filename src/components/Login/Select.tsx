@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { useState } from "react"
 
 import Text from "./components/Text"
 import LoginWrapper from "./components/LoginWrapper"
@@ -7,8 +8,7 @@ import Item from "./components/Item"
 import FadeIn from "./components/FadeIn"
 
 const TextWrapper = styled.div`
-    margin-top: 100px;
-    margin-bottom: 20px;
+    margin: 100px 20px 20px;
 `
 const Blcok = styled.div`
     width: 20px;
@@ -18,7 +18,9 @@ const GridWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    height: 35vh;
     max-height: 350px;
+    min-height: 150px;
     place-items: center;
     overflow-y: auto;
 `
@@ -35,6 +37,14 @@ const items = [
 ]
 
 export default function Select() {
+    const [selectedItems, setSelectedItems] = useState<string[]>([])
+
+    const handleSelectItem = (text: string) => {
+        setSelectedItems(prev => (prev.includes(text) ? prev.filter(item => item !== text) : [...prev, text]))
+    }
+
+    const isAnySelected = selectedItems.length > 0
+
     return (
         <>
             <LoginWrapper>
@@ -48,12 +58,18 @@ export default function Select() {
                 <FadeIn delay="1s">
                     <GridWrapper>
                         {items.map(item => (
-                            <Item key={item.text} text={item.text} image={item.image} />
+                            <Item
+                                key={item.text}
+                                text={item.text}
+                                image={item.image}
+                                isSelect={selectedItems.includes(item.text)}
+                                onClick={() => handleSelectItem(item.text)}
+                            />
                         ))}
                     </GridWrapper>
                 </FadeIn>
             </LoginWrapper>
-            <NextButton to="/signup" />
+            <NextButton to="/signup" isActive={isAnySelected} />
         </>
     )
 }

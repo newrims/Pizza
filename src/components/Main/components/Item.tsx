@@ -7,12 +7,12 @@ const Wrapper = styled.div`
     height: 259px;
     padding: 0;
     gap: 5px;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
 `
 const Rectangle = styled.div`
     width: 85vw;
-    max-width:350px;
+    max-width: 350px;
     height: 215px;
     background-color: #ffffff;
     border-radius: 23px;
@@ -31,7 +31,7 @@ const TitleText = styled.h2`
 `
 
 interface ItemProps {
-    text?: string; 
+    text?: string
 }
 
 export default function Item({ text = "" }: ItemProps) {

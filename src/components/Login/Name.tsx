@@ -9,8 +9,7 @@ import LoginWrapper from "./components/LoginWrapper"
 import FadeIn from "./components/FadeIn"
 
 const TextWrapper = styled.div`
-    margin-top: 100px;
-    margin-bottom: 20px;
+    margin: 100px 20px 20px;
 `
 const FlexWrapper = styled.div`
     display: flex;
@@ -22,9 +21,11 @@ const Input = styled.input`
     background-color: #d8d8d8;
     border-radius: 10px;
     margin-right: 5px;
+    margin-left: 20px;
     font-size: 24px;
 `
 const Explain = styled.div`
+    margin: 0 20px;
     margin-top: 7px;
     font-size: 13px;
     color: #3c3c3c;
@@ -34,6 +35,7 @@ const Explain = styled.div`
 export default function Name() {
     const [name, setName] = useState("")
     const { setUserName } = useUserName()
+    const [isActive, setIsActive] = useState(false)
     const [keyboardHeight, setKeyboardHeight] = useState(0)
 
     if (window.visualViewport) {
@@ -41,13 +43,15 @@ export default function Name() {
             let visualViewportHeight = window.visualViewport?.height || 0
             let windowHeight = window.innerHeight
             let keyboardHeight = windowHeight - visualViewportHeight
-
             setKeyboardHeight(keyboardHeight)
         })
     }
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const wordLength = e.target.value.length
         setName(e.target.value)
+        if (wordLength >= 2 && wordLength <= 8) setIsActive(true)
+        else setIsActive(false)
     }
 
     const onSubmit = () => {
@@ -71,10 +75,10 @@ export default function Name() {
                     </FlexWrapper>
                 </FadeIn>
                 <FadeIn delay="1.5s">
-                    <Explain>{"가게 이름은 2~10자 이내로 한글, 영문, 숫자만 입력 가능합니다."}</Explain>
+                    <Explain>{"가게 이름은 2~8자 이내로 한글, 영문, 숫자만 입력 가능합니다."}</Explain>
                 </FadeIn>
             </LoginWrapper>
-            <NextButton to="/where" onClick={onSubmit} keyboardHeight={keyboardHeight} />
+            <NextButton to="/where" onClick={onSubmit} keyboardHeight={keyboardHeight} isActive={isActive} />
         </>
     )
 }

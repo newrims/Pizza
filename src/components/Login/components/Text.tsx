@@ -3,7 +3,7 @@ import FadeIn from "./FadeIn"
 
 const Wrapper = styled.div<{ $red: boolean }>`
     text-align: left;
-    font-size: 36px;
+    font-size: 35px;
     line-height: 1.3;
     white-space: nowrap;
     font-weight: bold;

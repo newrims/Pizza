@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import styled, { keyframes } from "styled-components"
-import Confetti from "react-confetti"
+import confetti from "canvas-confetti"
 
 import { useUserName } from "../../context/UserNameContext"
 
@@ -19,12 +19,9 @@ const fadeOut = keyframes`
     }
 `
 const TextWrapper = styled.div`
-    margin-top: 300px;
+    margin: 300px 20px 20px;
     animation: ${fadeOut} 2s ease-in-out forwards;
     animation-delay: 3s;
-`
-const FlexWrapper = styled.div`
-    display: flex;
 `
 
 export default function Signup() {
@@ -32,6 +29,17 @@ export default function Signup() {
     const navigate = useNavigate()
 
     useEffect(() => {
+        function randomInRange(min: number, max: number) {
+            return Math.random() * (max - min) + min
+        }
+
+        confetti({
+            angle: 90,
+            spread: randomInRange(50, 70),
+            particleCount: randomInRange(50, 150),
+            origin: { x: 0.6, y: 0.6 }
+        })
+
         const timer = setTimeout(() => {
             navigate("/main/home")
         }, 5000)
@@ -41,14 +49,10 @@ export default function Signup() {
 
     return (
         <LoginWrapper>
-            {/* 꽃가루 날리기 */}
-            <Confetti width={window.innerWidth} height={window.innerHeight} />
             <TextWrapper>
                 <Text text={"개업 축하드립니다🥳"} />
-                <FlexWrapper>
-                    <Text red={true} text={userName} />
-                    <Text text={"\u00A0가게 사장님!"} />
-                </FlexWrapper>
+                <Text red={true} text={userName} />
+                <Text text={"가게 사장님!"} />
             </TextWrapper>
         </LoginWrapper>
     )
