@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Pizza/static/css/main.7a9017a2.css",
-    "main.js": "/Pizza/static/js/main.b90e2e37.js",
+    "main.css": "/Pizza/static/css/main.3bf03af3.css",
+    "main.js": "/Pizza/static/js/main.e741da09.js",
     "static/js/453.f33d9648.chunk.js": "/Pizza/static/js/453.f33d9648.chunk.js",
     "static/media/book8.jpg": "/Pizza/static/media/book8.0fbf530d35e94827d286.jpg",
     "static/media/book5.jpg": "/Pizza/static/media/book5.2b9dde2f437e7c6cbabd.jpg",
@@ -23,12 +23,12 @@
     "static/media/home-2-svgrepo-com.svg": "/Pizza/static/media/home-2-svgrepo-com.9fcd935bfc717a4977061efe825ab42e.svg",
     "static/media/chat-empty-svgrepo-com.svg": "/Pizza/static/media/chat-empty-svgrepo-com.cc4874ef8f8f7b81234823b6438ab202.svg",
     "static/media/search-svgrepo-com.svg": "/Pizza/static/media/search-svgrepo-com.7cdcda169a5bd89479680c3e9d582500.svg",
-    "main.7a9017a2.css.map": "/Pizza/static/css/main.7a9017a2.css.map",
-    "main.b90e2e37.js.map": "/Pizza/static/js/main.b90e2e37.js.map",
+    "main.3bf03af3.css.map": "/Pizza/static/css/main.3bf03af3.css.map",
+    "main.e741da09.js.map": "/Pizza/static/js/main.e741da09.js.map",
     "453.f33d9648.chunk.js.map": "/Pizza/static/js/453.f33d9648.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a9017a2.css",
-    "static/js/main.b90e2e37.js"
+    "static/css/main.3bf03af3.css",
+    "static/js/main.e741da09.js"
   ]
 }
